@@ -6,19 +6,30 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v1
-      - name: Compile LaTeX document
+      - name: Compile LaTeX document 1
         uses: dante-ev/latex-action@master
         with:
           working_directory : ./Group Agreement - Updated version
           root_file: Main.tex
-          #Case Discussion/Main.tex
-          #Group Agreement/Main.tex
-          #Group Agreement - For report/Main.tex
-          #Group Agreement - Updated version/Main.tex
+      - name: Compile LaTeX document 2
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Case Discussion
+          root_file: Main.tex
+      - name: Compile LaTeX document 3
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Group Agreement
+          root_file: Main.tex
+      - name: Compile LaTeX document 4
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Group Agreement - For report
+          root_file: Main.tex
       - name: update file and push to remote
         run: |
           git config --global user.name "Yifan-Liu-96"
           git config --global user.email "yifan.liu.5161@student.uu.se"
           git add -A
           git commit -m "Update PDF file"
-          git push
+          git push origin master
