@@ -1,37 +1,37 @@
-name: Build LaTeX document 
- on: [push] 
- jobs: 
- build_latex: 
- runs-on: ubuntu-latest 
- steps: 
- - name: Set up Git repository 
- uses: actions/checkout@v1 
- - name: Compile LaTeX document 1 
- uses: dante-ev/latex-action@master 
- with: 
- working_directory : ./Group Agreement - Updated version 
- root_file: Main.tex 
- - name: Compile LaTeX document 2 
- uses: dante-ev/latex-action@master 
- with: 
- working_directory : ./Case Discussion 
- root_file: Main.tex 
- - name: Compile LaTeX document 3 
- uses: dante-ev/latex-action@master 
- with: 
- working_directory : ./Group Agreement 
- root_file: Main.tex 
- - name: Compile LaTeX document 4 
- uses: dante-ev/latex-action@master 
- with: 
- working_directory : ./Group Agreement - For report 
- root_file: Main.tex 
- - name: push 
- uses: github-actions-x/commit@v2.7 
- with: 
- github-token: ${{ secrets.GITHUB_TOKEN }} 
- push-branch: 'master' 
- commit-message: 'PDF Update' 
- force-add: 'false' 
- name: GitHub Action 
- email: github-action@users.noreply.github.com 
+name: Build LaTeX document
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document 1
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Group Agreement - Updated version
+          root_file: Main.tex
+      - name: Compile LaTeX document 2
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Case Discussion
+          root_file: Main.tex
+      - name: Compile LaTeX document 3
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Group Agreement
+          root_file: Main.tex
+      - name: Compile LaTeX document 4
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Group Agreement - For report
+          root_file: Main.tex
+      - name: push 
+        uses: github-actions-x/commit@v2.7 
+        with: 
+          github-token: ${{ secrets.GITHUB_TOKEN }} 
+          push-branch: 'master' 
+          commit-message: 'PDF Update' 
+          force-add: 'false' 
+          name: GitHub Action 
+          email: github-action@users.noreply.github.com 
