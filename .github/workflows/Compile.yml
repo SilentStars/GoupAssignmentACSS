@@ -9,7 +9,8 @@ jobs:
       - name: Compile LaTeX document
         uses: dante-ev/latex-action@master
         with:
-          root_file: Group Agreement - Updated version/Main.tex
+          working_directory : ./Group Agreement - Updated version
+          root_file: Main.tex
           #Case Discussion/Main.tex
           #Group Agreement/Main.tex
           #Group Agreement - For report/Main.tex
