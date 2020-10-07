@@ -26,10 +26,12 @@ jobs:
         with:
           working_directory : ./Group Agreement - For report
           root_file: Main.tex
-      - name: update file and push to remote
-        run: |
-          git config --global user.name "Yifan-Liu-96"
-          git config --global user.email "yifan.liu.5161@student.uu.se"
-          git add -A
-          git commit -m "Update PDF file"
-          git push origin master
+      - name: push 
+        uses: github-actions-x/commit@v2.7 
+        with: 
+          github-token: ${{ secrets.GITHUB_TOKEN }} 
+          push-branch: 'master' 
+          commit-message: 'PDF Update' 
+          force-add: 'false' 
+          name: GitHub Action 
+          email: github-action@users.noreply.github.com 
