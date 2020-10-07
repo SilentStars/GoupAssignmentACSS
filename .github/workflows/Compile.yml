@@ -17,11 +17,8 @@ jobs:
           #Group Agreement - Updated version/Main.tex
       - name: update file and push to remote
         run: |
-          echo "Test push commit to the remote in the workflow" >> test.txt
-
           git config --global user.name "Yifan-Liu-96"
           git config --global user.email "yifan.liu.5161@student.uu.se"
-
           git add -A
           git commit -m "Update PDF file"
           git push
