@@ -16,7 +16,7 @@ jobs:
       uses: Jatus93/Latex-multicompiler@master
       with:
         path_to_list: 
-          ['Case Discussion/Main.tex', '']
-          ['Group Agreement/Main.tex', '']
-          ['Group Agreement - For report/Main.tex', '']
-          ['Group Agreement - Updated version/Main.tex', '']
+          -['Case Discussion/Main.tex']
+          -['Group Agreement/Main.tex']
+          -['Group Agreement - For report/Main.tex']
+          -['Group Agreement - Updated version/Main.tex']
