@@ -10,7 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-          Case Discussion/Main.tex
-          Group Agreement/Main.tex
-          Group Agreement - For report/Main.tex
-          Group Agreement - Updated version/Main.tex
+          'Case Discussion/Main.tex'
+          'Group Agreement/Main.tex'
+          'Group Agreement - For report/Main.tex'
+          'Group Agreement - Updated version/Main.tex'
