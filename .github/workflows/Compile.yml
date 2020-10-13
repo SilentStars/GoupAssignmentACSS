@@ -26,6 +26,11 @@ jobs:
         with:
           working_directory : ./Group Agreement - For report
           root_file: Main.tex
+      - name: Compile LaTeX document 5
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Conference-LaTeX
+          root_file: conference_101719.tex
       - name: push 
         uses: github-actions-x/commit@v2.7 
         with: 
