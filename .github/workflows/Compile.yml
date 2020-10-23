@@ -31,6 +31,11 @@ jobs:
         with:
           working_directory : ./Conference-LaTeX
           root_file: conference_101719.tex
+      - name: Compile LaTeX document 6
+        uses: dante-ev/latex-action@master
+        with:
+          working_directory : ./Feedback explanation
+          root_file: Main.tex
       - name: push 
         uses: github-actions-x/commit@v2.7 
         with: 
